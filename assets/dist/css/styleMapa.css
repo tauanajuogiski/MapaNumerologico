@@ -56,13 +56,7 @@ form button {
     padding: 10px;
     border-radius: 10px;
 }
-    
-.inner-form {
-    width: 80%;
-    margin: 0 auto;
-    color: #fff;
-}
-    
+        
 form {
     width: 100%; 
     margin: 0 auto;     
@@ -99,11 +93,14 @@ button {
 button i {
     margin-left: 10px;  /* Adiciona espaço à esquerda do ícone */
     margin-right: 10px; /* Adiciona espaço à direita do ícone */
+    width: 30%;
 }
 
-
-.text-container {
-    margin-left: 10px;
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 10px;
 }
 
 #btnContato {
@@ -112,6 +109,7 @@ button i {
     border: none;
     padding: 10px;
     cursor: pointer;
+    width: 80%;
 }
 
 .footer-container {
@@ -166,10 +164,6 @@ button i {
     height: 30px;
 }
 
-
-/* Adicione uma nova fonte caligráfica */
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-
 /* Aplique o estilo para o texto da numeração da pessoa */
 .text-container, #btnIniciarAudio {
     font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
@@ -177,6 +171,9 @@ button i {
     margin-top: 20px;
 }
 
+.text-container {
+    margin-left: 10px;
+}
 
 /* Centralize o título do quadrado */
 #title-about {
@@ -188,4 +185,42 @@ button i {
     width: 80%;
     margin: 20px auto; /* Adicione margem para espaçamento acima e abaixo do quadrado */
     color: #fff;
+}
+
+@media only screen and (max-width: 768px) {  
+    .section{
+        font-size: 15px;
+    }
+
+    #title-about {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #btnIniciarAudio{
+        font-size: 15px;
+    }
+
+    #text-container{
+        font-size: 15px;
+    }
+
+    .outer-form {
+        width: 95%;
+        margin: 0 auto;
+        background-color: #0e273e;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    #btnContato {
+        background-color: #14804a;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 15px;
+    }
 }
