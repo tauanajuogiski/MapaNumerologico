@@ -9,6 +9,7 @@ html, body {
 }
 
 body {
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
 }
@@ -172,7 +173,6 @@ button i {
 /* Aplique o estilo para o texto da numeração da pessoa */
 .text-container, #btnIniciarAudio {
     font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
-    font-family: 'Satisfy', cursive; /* Substitua 'Satisfy' pela fonte desejada */
     line-height: 1.5; /* Ajuste o espaçamento entre linhas conforme necessário */
     margin-top: 20px;
 }
