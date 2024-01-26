@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Another+Shabby&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=CodecPro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Altide&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    flex: 1;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+}
+
+.about-header {
+    text-align: left;
+    color: #d4c6c2;
+    text-shadow: 4px 8px 10px rgba(0, 0, 0, 0.8);
+    font-size: 0.1em;
+}
+
+.form {
+    background: #385176 radial-gradient(#29405e 2px, transparent 2px) 0 / 50px 50px repeat;
+    padding: 20px;
+}
+
+form input,
+form button {
+    display: block;
+    margin: 10px 0;
+    background-color: #477CA8;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px; 
+    width: 100%;
+    color: #000000;
+}
+
+.outer-form {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #0e273e;
+    padding: 10px;
+    border-radius: 10px;
+}
+    
+.inner-form {
+    width: 80%;
+    margin: 0 auto;
+    color: #fff;
+}
+    
+form {
+    width: 100%; 
+    margin: 0 auto;     
+}
+
+.form-input::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.centered-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#btnIniciarAudio {
+    margin-bottom: 10px;
+}
+
+.centered-row {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    background-color: 0e273e;
+    color: #0e273e;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+button i {
+    margin-left: 10px;  /* Adiciona espaço à esquerda do ícone */
+    margin-right: 10px; /* Adiciona espaço à direita do ícone */
+}
+
+
+.text-container {
+    margin-left: 10px;
+}
+
+#btnContato {
+    background-color: #14804a;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.footer-container {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: row; /* Mantenha a direção de linha para colocar os elementos lado a lado */
+    justify-content: space-between; /* Distribua os elementos ao longo da linha */
+    align-items: center; /* Alinhe os elementos verticalmente ao centro */
+}
+
+#audioButton{
+    background-color: #0e273e00;
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.footer-text-container {
+    margin: 8px;
+    flex: 100%; /* Ajuste o fator de flexibilidade para tornar esta parte mais larga */
+    text-align: center; /* Alinhe o texto ao centro */
+}
+
+.footer-text-container p{
+    margin: 2px;
+}
+
+.footer-icons-container {
+    flex: 1; /* Igualize o fator de flexibilidade para ambos os contêineres */
+    padding: 5px; /* Adicione o espaçamento interno desejado */
+    text-align: center; /* Alinhe o texto ao centro */
+}
+
+.footer-icons-container {
+    display: flex;
+    align-items: center;
+}
+
+.footer-icons-container a {
+    margin: 0 10px; /* Adicione espaçamento horizontal entre os ícones */
+}
+
+.footer-icons-container img {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Adicione uma nova fonte caligráfica */
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+/* Aplique o estilo para o texto da numeração da pessoa */
+.text-container, #btnIniciarAudio {
+    font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-family: 'Satisfy', cursive; /* Substitua 'Satisfy' pela fonte desejada */
+    line-height: 1.5; /* Ajuste o espaçamento entre linhas conforme necessário */
+    margin-top: 20px;
+}
+
+
+/* Centralize o título do quadrado */
+#title-about {
+    text-align: center;
+}
+
+/* Adicione espaçamento entre o título e os outros textos */
+.inner-form {
+    width: 80%;
+    margin: 20px auto; /* Adicione margem para espaçamento acima e abaixo do quadrado */
+    color: #fff;
+}
