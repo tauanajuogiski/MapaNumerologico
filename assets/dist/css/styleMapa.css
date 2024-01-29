@@ -50,20 +50,11 @@ form button {
 }
 
 .outer-form {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     background-color: #0e273e;
     padding: 10px;
     border-radius: 10px;
-}
-        
-form {
-    width: 100%; 
-    margin: 0 auto;     
-}
-
-.form-input::placeholder{
-    color: rgb(0, 0, 0);
 }
 
 .centered-column {
@@ -97,7 +88,7 @@ button i {
 }
 
 .center-container {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     margin: 0 10px 0 10px;
@@ -171,10 +162,6 @@ button i {
     margin-top: 20px;
 }
 
-.text-container {
-    margin-left: 10px;
-}
-
 /* Centralize o título do quadrado */
 #title-about {
     text-align: center;
@@ -185,6 +172,11 @@ button i {
     width: 80%;
     margin: 20px auto; /* Adicione margem para espaçamento acima e abaixo do quadrado */
     color: #fff;
+}
+
+.text-container {
+    font-size: 18px;
+    line-height: 1.5
 }
 
 @media only screen and (max-width: 768px) {  
