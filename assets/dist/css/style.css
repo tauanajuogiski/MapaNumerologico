@@ -13,6 +13,7 @@ header {
     color: #fff;
     text-align: left;
     padding: 10px;
+    text-align: center;
 }
 
 h1 {
@@ -386,10 +387,6 @@ form {
         padding: 20px;
     }
 
-    header {
-        text-align: center;
-    }
-
     .centered-image {
         position: absolute;
         margin-top: 8em; /* Ajuste conforme necessário */
@@ -456,10 +453,6 @@ form {
     .section-cover h1 {
         font-size: 1.5em;
         padding: 20px;
-    }
-
-    header {
-        text-align: center;
     }
 
     .centered-image {
