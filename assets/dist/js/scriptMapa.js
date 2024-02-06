@@ -23,7 +23,7 @@
  };
 
  function calcularNumeroNumerologia(dataNascimento) {
-   const numeros = dataNascimento.split('-').map(Number);
+   const numeros = dataNascimento.split('/').map(Number);
    let soma = numeros.reduce((acc, curr) => acc + curr, 0);
 
    while (soma > 9 && soma !== 11 && soma !== 22) {

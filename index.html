@@ -57,7 +57,7 @@
 							afetado minha energia e influência áreas específicas da minha 
 							vida. Foi uma jornada de descoberta pessoal e crescimento espiritual. 
 							Recomendo a todos que queiram se aprofundar nesse universo fascinante
-							<br><span class="highlight depoiment">Elaine Bassini</span></p>
+							<br><span class="highlight depoiment">Elisangela Masson</span></p>
 					</div>
 					<div class="testimonial-image">
 						<img src="./assets/brand/Depoente1.jpeg" alt="Foto do Depoente">
@@ -72,7 +72,7 @@
 							a orientação da Mentora Quântica Suzy Yucca, pude trabalhar em mim mesmo e sentir
 							uma melhoria significativa em diferentes aspectos da minha vida. Sinto-me mais 
 							esclarecido e conectado com minha essência. Gratidão por essa oportunidade!
-							<br><span class="highlight depoiment">Eriki Kakazu</span></p>
+							<br><span class="highlight depoiment">Amanda Conrado</span></p>
 					</div>
 					<div class="testimonial-image">
 						<img src="./assets/brand/Depoente2.jpeg" alt="Foto do Depoente">
@@ -85,7 +85,7 @@
 							de avançar. Com a ajuda de Suzy Yucca, aprendi técnicas para harmonizar meus 
 							chacras e equilibrar minha energia. Os resultados foram surpreendentes! Sinto-me
 							mais em paz, focado e conectado com meu propósito de vida.
-							<br><span class="highlight depoiment">Ismim Freitas</span></p>
+							<br><span class="highlight depoiment">Bruna Karin Righi Santos</span></p>
 					</div>
 					<div class="testimonial-image">
 						<img src="./assets/brand/Depoente3.jpeg" alt="Foto do Depoente">
@@ -103,9 +103,8 @@
 					
 					<div class="info">
 						<div class="header-mentora">	
-							<h3 id="title-mentora">Suzi - Mentora Quântica</h3>
+							<h3 id="title-mentora">Suzy Yucca Mentora Quântica</h3>
 						</div>
-						<p>ENEAGRAMA</p>
 						<p>TAROT DOS CHACRAS</p>
 						<p>HOMEOPATIA E FLORAL</p>
 						<p>JOGO DA TRANSFORMAÇÃO</p>
@@ -132,7 +131,7 @@
 					</div>
 					<div>
 						<label for="dataNascimento">Data de Nascimento</label>
-						<input type="date" id="dataNascimento" class="form-input" required min="1900-01-01" max="2200-12-31">
+						<input type="text" id="dataNascimento" class="form-input" placeholder="DD/MM/AAAA" maxlength="10" oninput="formatarData(this.value)" required>
 					</div>
 					<div>
 						<label for="telefone">Telefone</label>
@@ -158,6 +157,79 @@
 		</div>
 	</footer>
 
+	<script>
+		function formatarData() {
+			var input = document.getElementById('dataNascimento');
+			var valor = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+			var tamanho = valor.length;
+		
+			if (tamanho > 2 && tamanho < 5) {
+				input.value = valor.substr(0, 2) + '/' + valor.substr(2);
+			} else if (tamanho >= 5) {
+				var dia = ('0' + parseInt(valor.substr(0, 2), 10)).slice(-2);
+				var mes = ('0' + parseInt(valor.substr(2, 2), 10)).slice(-2);
+				var ano = parseInt(valor.substr(4), 10);
+		/*
+				// Validar o mês entre 1 e 12
+				if (mes < 1 || mes > 12) {
+					exibirErro('Mês inválido');
+					return;
+				}
+		
+				// Obter a quantidade de dias no mês
+				var diasNoMes = new Date(ano, mes, 0).getDate();
+		
+				// Validar o dia
+				if (dia < 1 || dia > diasNoMes) {
+					exibirErro('Dia inválido para o mês especificado');
+					return;
+				}
+		*/
+				input.value = dia + '/' + mes + '/' + ano;
+			}
+		}
+		
+		function ValidarData() {
+            var inputValue = document.getElementById('dataNascimento').value;
+
+            // Verifica se o valor é uma data válida
+            var data = new Date(inputValue);
+            var ano = data.getFullYear();
+            var mes = data.getMonth() + 1; // Mês é baseado em zero, então somamos 1
+            var dia = data.getDate();
+            var anoAtual = new Date().getFullYear();
+
+            if (isNaN(data.getTime())) {
+                exibirErro('Data inválida');
+                return;
+            }
+
+            if (ano < 1920 || ano > anoAtual) {
+                exibirErro('Ano inválido');
+                return;
+            }
+
+            if (mes < 1 || mes > 12) {
+                exibirErro('Mês inválido');
+                return;
+            }
+
+            var diasNoMes = new Date(ano, mes, 0).getDate();
+
+            // Validar o dia
+            if (dia < 1 || dia > diasNoMes) {
+                exibirErro('Dia inválido para o mês especificado');
+                return;
+            }
+        }
+
+        function exibirErro(mensagem) {
+            var input = document.getElementById('dataNascimento');
+            input.setCustomValidity(mensagem);
+            input.reportValidity();
+        }
+
+	</script>
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/dist/js/scriptForm.js"></script>
 </body>
